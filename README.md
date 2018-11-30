@@ -7,7 +7,7 @@ including those with pooling layers, general activation functions and residual l
 Cite this work:
 
 Akhilan Boopathy, Tsui-Wei Weng, Pin-Yu Chen, Sijia Liu and Luca Daniel, "[**CNN-Cert: An Efficient Framework for Certifying Robustness of Convolutional
-Neural Networks**](https://github.com/AkhilanB/CNN-Cert)", AAAI 2019.
+Neural Networks**](https://arxiv.org/pdf/1811.12395.pdf)", AAAI 2019.
 
 ```
 @inproceedings{Boopathy2019cnncert,
@@ -19,3 +19,7 @@ Neural Networks",
   month = "Jan"
 }
 ```
+
+Code
+-------------------------------------
+Our codes will be released soon! Please stay tuned.
