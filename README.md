@@ -1,9 +1,11 @@
+![Summary](Summary.PNG)
+
 About CNN-Cert
 =====================================
 CNN-Cert is a general and efficient framework for certifying the robustness of convolutional neural networks (CNN). 
 * CNN-Cert is **general**: it is able to certify lower bounds on the minimum adversarial distortion for a variety of CNNs with general activations (ReLU, tanh, sigmoid, arctan, etc), including those with convolutional layers, pooling layers, residual layers and batch-norm layers. In addition, it is a generalized version of previous robustness certification algorithms [Fast-Lin](https://arxiv.org/pdf/1804.09699.pdf) and [CROWN](https://arxiv.org/pdf/1811.00866.pdf) which focus on pure fully-connected networks with ReLU and general activations.   
 
-* CNN-Cert is also **efficient**: it exploits convolutional structure to produce bounds more efficiently than comparable certification methods. We observed in our experiments that CNN-Cert achieves up to 17 and 11 times of speed-up compared to Fast-Lin and CROWN, and up to 366 times of speed-up compared to the dual-LP-based verification methods (see Tables 3-13 in our paper) while CNN-Cert obtains similar or even better robsutness certificates (a.k.a. certified lower bounds).
+* CNN-Cert is also **efficient**: it exploits convolutional structure to produce bounds more efficiently than comparable certification methods. We observed in our experiments that CNN-Cert achieves up to 17 and 11 times of speed-up compared to Fast-Lin and CROWN, and up to 366 times of speed-up compared to the dual-LP-based verification methods (see Tables 3-13 in our paper) while CNN-Cert obtains similar or even better robustness certificates (a.k.a. certified lower bounds).
 
 Cite our work:
 
@@ -20,6 +22,9 @@ Neural Networks",
   month = "Jan"
 }
 ```
+
+![Related Work](RelatedWork.PNG)
+
 
 Setup
 -----------------------
@@ -226,3 +231,9 @@ To compute the average l-2 CNN-Cert bound over 10 images on a CIFAR sigmoid Resn
 from pymain import run_cnn
 bound, time = run_cnn('my_cifar_resnet', 10, '2', core = False, activation = 'sigmoid', cifar = True)
 ```
+
+Experimental Results
+----------------
+Results of running CNN-Cert are shown for some example networks with different perturbation norms. CNN-Cert is compared to other certified bounds in both bounds and runtimes. As illustrated, for the example networks CNN-Cert performs similar to or better than the compared methods with faster runtime.
+![Bounds Results](BoundsResults.PNG)
+![Runtime Results](RuntimeResults.PNG)
